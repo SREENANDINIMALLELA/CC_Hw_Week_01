@@ -33,26 +33,63 @@ def add_string_as_number(string_1, string_2)
 end
 #----------------number to full months -------------
 def number_to_full_month_name(month)
-
-if(month ==1)
-  month = "January"
-elsif (month == 3)
-  month ="March"
-elsif(month == 9)
- month = "September"
- end
+  case month
+  when 1
+    month = "January"
+  when 2
+    month = "February"
+  when 3
+    month = "March"
+  when 4
+    month = "April"
+  when 5
+    month = "May"
+  when 6
+    month = "June"
+  when 7
+    month = "July"
+  when 8
+    month = "August"
+  when 9
+    month = "September"
+  when 10
+    month = "October"
+  when 11
+    month = "November"
+  when 12
+    month = "December"
+     end
 return month
 end
 
 #-------------------number to months in short form ----
 def number_to_short_month_name(month)
-  if(month ==1)
+  case month
+  when 1
     month = "Jan"
-elsif (month == 4)
-  month ="Apr"
-elsif (month == 10)
-  month = "Oct"
-end
+  when 2
+    month = "Feb"
+  when 3
+    month = "Mar"
+  when 4
+    month = "Apr"
+  when 5
+    month = "May"
+  when 6
+    month = "Jun"
+  when 7
+    month = "Jul"
+  when 8
+    month = "Aug"
+  when 9
+    month = "Sep"
+  when 10
+    month = "Oct"
+  when 11
+    month = "Nov"
+  when 12
+    month = "Dec"
+  end
 return month
 end
 #-----------volume of the cube ------------
