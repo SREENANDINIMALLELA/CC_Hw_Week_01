@@ -29,7 +29,7 @@ def join_string(string_1,string_2)
 end
 #-----------convert string to an integer value ----------
 def add_string_as_number(string_1, string_2)
-  return string_1.to_i + string_2.to_i
+  return string_1.to_i() + string_2.to_i()
 end
 #----------------number to full months -------------
 def number_to_full_month_name(month)
@@ -63,34 +63,40 @@ return month
 end
 
 #-------------------number to months in short form ----
-def number_to_short_month_name(month)
-  case month
-  when 1
-    month = "Jan"
-  when 2
-    month = "Feb"
-  when 3
-    month = "Mar"
-  when 4
-    month = "Apr"
-  when 5
-    month = "May"
-  when 6
-    month = "Jun"
-  when 7
-    month = "Jul"
-  when 8
-    month = "Aug"
-  when 9
-    month = "Sep"
-  when 10
-    month = "Oct"
-  when 11
-    month = "Nov"
-  when 12
-    month = "Dec"
-  end
-return month
+# def number_to_short_month_name(month)
+#   case month
+#   when 1
+#     return "Jan"
+#   when 2
+#     return "Feb"
+#   when 3
+#     return "Mar"
+#   when 4
+#     return "Apr"
+#   when 5
+#     return "May"
+#   when 6
+#     return "Jun"
+#   when 7
+#     return "Jul"
+#   when 8
+#     return "Aug"
+#   when 9
+#     return "Sep"
+#   when 10
+#   return "Oct"
+#   when 11
+#     return "Nov"
+#   when 12
+#     return "Dec"
+#   end
+# end
+
+
+#------------------------------------
+def number_to_short_month_name(num)
+  month = number_to_full_month_name(num)
+  return month [0..2]
 end
 #-----------volume of the cube ------------
 def volume_of_cube(length_of_the_side)
@@ -98,9 +104,9 @@ return length_of_the_side.to_i**3
 end
 #-----------volume of the sphere --------------
 def volume_of_sphere(radius_of_sphere)
-return (4.0/3)*(22.0/7)*(radius_of_sphere**3)
+return (4.0/3)*Math::PI*(radius_of_sphere**3)
 end
 #--------------convert fahrenheit_to_celsius---------
 def fahrenheit_to_celsius(fahrenheit)
-  return (fahrenheit - 32)*5/9.to_i
+  return (fahrenheit - 32)*5.0/9
 end

@@ -89,14 +89,14 @@ add_result = add( 1, 2 )
   def test_volume_of_sphere()
     #add test code here
     volume1 = volume_of_sphere(2)
-    assert_equal(33.52 ,volume1.round(2))
+    assert_equal(33.51 ,volume1.round(2))
   end
 
   #Given a value in farenheit, convert this into celsius.
   def test_fahrenheit_to_celsius()
     #add test code here
-    fahrenhei = fahrenheit_to_celsius(80)
-    assert_equal(26 ,fahrenhei )
+    celsius = fahrenheit_to_celsius(80)
+    assert_equal(26.67 ,celsius.round(2) )
   end
 
 
