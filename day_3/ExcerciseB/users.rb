@@ -60,10 +60,12 @@ p users ["Erik"][:home_town]
 # Get the array of Erik's lottery numbers
 p users ["Erik"][:lottery_numbers]
 # Get the type of Avril's pet Monty
-p users ["Avril"][:pets][0][:name]
+p users ["Avril"][:pets][0][:species]
 
 # Get the smallest of Erik's lottery numbers
 p users ["Erik"][:lottery_numbers].sort() [0]
+#p users ["Erik"][:lottery_numbers].min()
+
 # Return an array of Avril's lottery numbers that are even
 def hashArray(my_hash)
 lottery_numbers = my_hash["Avril"][:lottery_numbers]
@@ -77,12 +79,30 @@ end
   return array
 end
  p hashArray(users)
+ #ef hashArray(my_hash)
+ # lottery_numbers = my_hash["Avril"][:lottery_numbers]
+ # array = []
+ # for number in lottery_numbers
+ #   if number.even?
+ #     array.push(number)
+ #   end
+ # end
+ #   return array
+ # end
+ #  p hashArray(users)
+ #--------
+ # p users ["Avril"][:lottery_numbers].partition(&:even).first()
+ #p users ["Avril"][:lottery_numbers].select{|x| x.even?()}
+ #result = users["Avril"][:lottery_numbers].reject{|x| x.add?()}
 # Erik is one lottery number short! Add the number 7 to be included in his lottery numbers
 def hashArray2(my_hash)
 lottery_numbers = my_hash["Erik"][:lottery_numbers].push(7)
   return lottery_numbers
 end
 p hashArray2(users)
+
+# users ["Erik"][:lottery_numbers].push(7)
+
 # Change Erik's hometown to Edinburgh
  users ["Erik"][:home_town] = "Edinburgh"
 p users ["Erik"][:home_town]
@@ -93,6 +113,9 @@ pet_fluffy= {
 }
 users["Erik"][:pets].push(pet_fluffy)
 p users ["Erik"][:pets][4][:name]
+# users[]["Erik"][:pets].push(:name => "Fluffy",
+#:species => "dog")
+#p users ["Erik"][:pets]
 
 #Add another person to the users hash
 

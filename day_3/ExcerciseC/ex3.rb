@@ -17,6 +17,7 @@ united_kingdom = [
 ]
 
 # Change the capital of Wales from "Swansea" to "Cardiff".
+#
 def change_capital (my_array)
   for my_hash in my_array
     if (my_hash[:name ] == "Wales" )
@@ -37,6 +38,11 @@ northern = {
 }
 united_kingdom.push(northern)
 p united_kingdom
+#united_kingdom << {{
+#   name: "Northern Ireland",
+#   population: 1811000,
+#   capital: "Belfast"
+# }}
 # Use a loop to print the names of all the countries in the UK.
 
 def countries(country)
