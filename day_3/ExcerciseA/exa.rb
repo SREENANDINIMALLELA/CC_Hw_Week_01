@@ -42,9 +42,13 @@ end
 p " Number of stops in this route : #{countStops}"
 
 # How many ways can we return "Falkirk High" from the array?
-#p stops[2]
-
-
+p stops
+p stops[2]
+p stops[2..2]
+stops .each {|x| if (x == "Falkirk High")
+  p x
+end
+}
 # Reverse the positions of the stops in the array
 p stops.reverse()
 
